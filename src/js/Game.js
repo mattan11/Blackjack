@@ -1,12 +1,12 @@
 import {Deck} from './Deck';
 import {Player} from './Player';
+import {Table} from './Table';
 
 class Game {
-  constructor({playersCards, dealersCards, player}) {
+  constructor({player, table}) {
     this.player = player;
     this.dealer = new Player('Krupier');
-    this.playersCards = playersCards;
-    this.dealersCards = dealersCards;
+    this.table = table;
     this.deck = new Deck();
     this.deck.shuffle();
   }
@@ -19,19 +19,22 @@ class Game {
     for (let i = 0; i < 2; i++) {
       const cardForPlayer = this.deck.pickOne();
       this.player.hand.addCard(cardForPlayer);
-      this.playersCards.appendChild(cardForPlayer.render());
+      this.table.showPlayersCard(cardForPlayer);
 
-      const cardForAI = this.deck.pickOne();
-      this.player.hand.addCard(cardForAI);
-      this.dealersCards.appendChild(cardForAI.render());
+      const cardForDealer = this.deck.pickOne();
+      this.player.hand.addCard(cardForDealer);
+      this.table.showDealersCard(cardForDealer);
     }
   }
 }
 
+const table = new Table(
+  document.getElementById('playersCards'),
+  document.getElementById('dealersCards')
+);
 const player = new Player('Marek');
 const game = new Game({
   player,
-  playersCards: document.getElementById('playersCards'),
-  dealersCards: document.getElementById('dealersCards'),
+  table,
 });
 game.run();
