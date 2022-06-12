@@ -1,5 +1,7 @@
-import {Card} from './Card';
+import {Deck} from './Deck';
+import {Player} from './Player';
 
-const card = new Card('A', 'hearts');
+const player = new Player('Marek');
 
-document.getElementById('playersCards').appendChild(card.render());
+const deck = new Deck();
+deck.shuffle();
