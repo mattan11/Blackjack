@@ -8,7 +8,6 @@ about: Describe an issue using this repository code
 
 A clear and concise description of what the problem is.
 
-
 **Describe alternatives you've considered**
 
 A clear and concise description of any alternative solutions or features you've considered.
