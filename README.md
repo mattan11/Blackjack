@@ -21,21 +21,6 @@ $ npm ci
 
 > You can still use `npm install` in cases the `npm ci` raises system error due to specific platform incompatibilities.
 
-## Define Package Metadata
-
-* Amend `package.json` file and optionally specify:
-    * `name` - Name of your project. A name can be optionally prefixed by a scope, e.g. `@myorg/mypackage`.
-    * `version` - Specify and maintain a version number indicator for your project code.
-    * `author` - Your organisation or just yourself. You can also
-      specify [`contributors`](https://docs.npmjs.com/files/package.json#people-fields-author-contributors).
-    * `description` - Short description of your project.
-    * `keywords` - Put keywords in it. It’s an array of strings.
-    * `repository` - Specify the place where your code lives.
-    * `license` - Announce your code license, figure out the license
-      from [Choose an Open Source License](https://choosealicense.com) .
-    * `browserslist` - Specify the supported browsers versions - you can refer
-      to [full list](https://github.com/browserslist/browserslist#full-list) of availalbe options.
-
 # Configuration
 
 ## Environment Configuration
