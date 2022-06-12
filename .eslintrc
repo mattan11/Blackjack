@@ -1,0 +1,30 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "env": {
+    "node": true,
+    "jasmine": true,
+    "jquery": true
+  },
+  "rules": {
+    "no-use-before-define": 1,
+    "func-names": 1,
+    "prefer-arrow-callback": 1,
+    "no-var": 1,
+    "max-len": 1,
+    "guard-for-in": 1,
+    "object-shorthand": 1,
+    "no-restricted-syntax": 1,
+    "prefer-template": 1,
+    "import/no-amd": 1,
+    "space-before-function-paren": 1,
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
+    "import/no-unresolved": 0,
+    "import/extensions": 0
+  },
+  "globals": {
+    "browser": false,
+    "window": true,
+    "document": true
+  }
+}
